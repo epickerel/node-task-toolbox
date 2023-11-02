@@ -12,7 +12,19 @@ NodeJS can be a great option for these scripts in many cases no matter what the 
 
 Node Task Harness gives you a place to write your various tasks, add dependencies, documentation and manage your org's secrets and constants. It streamlines tool-sharing on a team.
 
+## Usage
+
 I recommend forking the main repo so you can maintain your own stack of tasks. But do feel welcome to submit PRs for what may be valuable additions to the primary stack.
+
+Setup:
+
+```:bash
+yarn
+yarn task list
+yarn task createTask argueWithMe "Engage in a five minute argument with the computer"
+```
+
+The script will always load a local `.env` file for your secrets. You can access them via `process.env` or optionally add them to `src/taskMgmt/constants.js` when you think you'll use them frequently. The same constants file can be used to store paths, common urls and other items that might get used often.
 
 ## Limitations
 

@@ -5,7 +5,7 @@ const task = {
 
 const __TASK_NAME__ = async (context) => {
   console.log(`Executing ${task.name} task`);
-  console.log(context.env?.yourEnvVar);
+  console.log(context.constants);
 };
 
 export default __TASK_NAME__;
