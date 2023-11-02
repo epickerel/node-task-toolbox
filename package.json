@@ -1,0 +1,23 @@
+{
+  "name": "node-task-harness",
+  "version": "1.0.0",
+  "description": "A simple nodejs setup to quickly write and maintain useful tasks",
+  "type": "module",
+  "main": "src/index.js",
+  "author": "Emmett Pickerel",
+  "license": "MIT",
+  "private": false,
+  "imports": {
+    "#src/*": {
+      "default": "./src/*"
+    }
+  },
+  "scripts": {
+    "task": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
+  }
+}
