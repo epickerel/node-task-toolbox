@@ -6,7 +6,7 @@ A simple framework to maintain a stack of potentially interdependent node script
 
 In many positions in the past, I've found the need to write hundreds (at least) of scripted tooling to assist in development and business requests. "Can you get me a report that shows all the failed geolocations from the past two weeks?" might be an example of the latter. Data mining, data fixing, tools to ease the daily drudgery...
 
-NodeJS can be a great option for these scripts in many cases no matter what the stack consists of, but writing them independently meant it was hard for other developers to adopt the scripts with node dependencies, required node versions and so forth.
+NodeJS can be a great option for these scripts in many cases no matter what the stack consists of. Unlike bash scripts or batchfiles, they're platform independent. However, writing them independently can means it's hard for other developers to understand how the scripts are used, assuming they even find out they exist!
 
 ## The solution
 
