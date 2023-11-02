@@ -21,7 +21,13 @@ Setup:
 ```:bash
 yarn
 yarn task list
+```
+
+Usage:
+
+```:bash
 yarn task createTask argueWithMe "Engage in a five minute argument with the computer"
+yarn task argueWithMe
 ```
 
 The script will always load a local `.env` file for your secrets. You can access them via `process.env` or optionally add them to `src/taskMgmt/constants.js` when you think you'll use them frequently. The same constants file can be used to store paths, common urls and other items that might get used often.
