@@ -30,11 +30,17 @@ yarn task createTask argueWithMe "Engage in a five minute argument with the comp
 yarn task argueWithMe
 ```
 
+Testing:
+
+```:bash
+yarn test
+```
+
 The script will always load a local `.env` file for your secrets. You can access them via `process.env` or optionally add them to `src/taskMgmt/constants.js` when you think you'll use them frequently. The same constants file can be used to store paths, common urls and other items that might get used often.
 
 ## Limitations
 
-Presently, this only supports a flat directory structure of tasks. It also supports command line arguments in the simplest way possible.
+Presently, this only supports a flat directory structure of tasks, and only .js files. ECM has been adopted without use of transpilers. This involves some (for now) experimental Jest features.
 
 ## Credit
 

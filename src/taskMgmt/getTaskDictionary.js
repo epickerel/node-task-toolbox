@@ -1,10 +1,10 @@
-import { promises as fs } from 'fs';
+import { getTaskMap } from './getTaskMap';
 
 export const getTaskDictionary = async () => {
-  const files = await fs.readdir('src/tasks');
+  const files = await getTaskMap();
   const taskDictionary = await Promise.all(
     files.map(async (file) => {
-      const task = await import(`#src/tasks/${file}`);
+      const task = await import(`#src/tasks/${file}.js`);
       return task.task;
     }),
   );

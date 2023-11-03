@@ -13,11 +13,13 @@
     }
   },
   "scripts": {
-    "task": "node src/index.js"
+    "task": "node src/index.js",
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest)"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
     "eslint": "^8.52.0",
+    "jest": "^29.7.0",
     "prettier": "^3.0.3"
   }
 }

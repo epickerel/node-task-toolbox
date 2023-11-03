@@ -9,6 +9,7 @@ const task = {
 
 const createTask = async (_context, taskName, taskDescription = '') => {
   let taskMap = await getTaskMap();
+  console.log('infile', taskMap);
   if (taskMap.includes(taskName)) {
     console.log(`Task already exists: ${taskName}`);
   } else {
