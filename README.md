@@ -1,4 +1,4 @@
-# Node Task Harness
+# Node Task Toolbox
 
 A simple framework to maintain a stack of potentially interdependent node scripts locally.
 
