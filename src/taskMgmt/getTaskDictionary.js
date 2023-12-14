@@ -1,4 +1,4 @@
-import { getTaskMap } from './getTaskMap';
+import { getTaskMap } from './getTaskMap.js';
 
 export const getTaskDictionary = async () => {
   const files = await getTaskMap();

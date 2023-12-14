@@ -18,7 +18,7 @@ describe('getTaskMap', () => {
   });
   beforeEach(() => {
     jest.resetAllMocks();
-    dirfiles = ['someTask.js', 'anotherTask.js', 'asubdir', 'someotherfile.txt'];
+    dirfiles = ['someTask.js', 'anotherTask.js', 'anotherTask.test.js', 'asubdir', 'someotherfile.txt'];
     fs.readdir.mockResolvedValue(dirfiles);
   });
 
