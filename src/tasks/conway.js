@@ -1,4 +1,6 @@
 import { conwayGOL } from '../lib/conwayGOL/index.js';
+import { txt2Array } from '../lib/conwayGOL/txt2Array.js';
+import { array2Cells } from '../lib/conwayGOL/array2Cells.js';
 
 const task = {
   name: 'conway',
@@ -19,7 +21,7 @@ const renderGrid = (grid) => {
   return rows.join('\n');
 };
 
-const startingGrid = `
+const startingGrid = txt2Array(`
 ..........
 ...**.....
 ....*.....
@@ -30,26 +32,18 @@ const startingGrid = `
 .....*....
 ....*.....
 ..........
-`
-  .split('\n')
-  .map((row) =>
-    row
-      .trim()
-      .split('')
-      .map((cell) => (cell === '*' ? true : false)),
-  );
+`);
+
+const startingCells = array2Cells(startingGrid);
 
 const conway = async (context) => {
   console.log(`Executing ${task.name} task`);
   const game = conwayGOL();
   const displayW = 10;
   const displayH = 10;
-  startingGrid.forEach((row, y) => {
-    row.forEach((cell, x) => {
-      if (cell) {
-        game.addCell(x, y);
-      }
-    });
+
+  startingCells.forEach((cell) => {
+    game.addCell(cell.x, cell.y);
   });
   while (true) {
     const grid = game.getGrid(0, 0, displayW, displayH);

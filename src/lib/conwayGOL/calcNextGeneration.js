@@ -1,5 +1,9 @@
 import { getCellNeighbours } from './getCellNeighbours.js';
 
+/* 
+  Given a list of cells in an infinite grid, calculate the next generation of cells.
+  Allows the grid to expand by one unit in all directions.
+*/
 export const calcNextGeneration = (cells) => {
   const nextCells = [];
   const minX = Math.min(...cells.map((cell) => cell.x)) - 1;
