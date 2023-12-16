@@ -41,20 +41,19 @@ const startingGrid = `
 
 const conway = async (context) => {
   console.log(`Executing ${task.name} task`);
-  let game = conwayGOL();
+  const game = conwayGOL();
   const displayW = 10;
   const displayH = 10;
   startingGrid.forEach((row, y) => {
     row.forEach((cell, x) => {
       if (cell) {
-        game = game.addCell(x, y);
+        game.addCell(x, y);
       }
     });
   });
   while (true) {
     const grid = game.getGrid(0, 0, displayW, displayH);
     console.clear();
-    // console.log('\n');
     console.log(renderGrid(grid));
     game.doNextGeneration();
     await new Promise((resolve) => setTimeout(resolve, 1000));
