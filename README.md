@@ -10,7 +10,7 @@ NodeJS can be a great option for these scripts in many cases no matter what the 
 
 ## The solution
 
-Node Task Harness gives you a place to write your various tasks, add dependencies, documentation and manage your org's secrets and constants. It streamlines tool-sharing on a team.
+Node Task Toolbox gives you a place to write your various tasks, add dependencies, documentation and manage your org's secrets and constants. It streamlines tool-sharing on a team.
 
 ## Usage
 
